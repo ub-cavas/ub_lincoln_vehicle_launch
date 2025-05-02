@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
   <!-- load parameter -->
-  <xacro:property name="vehicle_info" value="${xacro.load_yaml('$(find ub_lincoln_vehicle_description)/config/vehicle_info.param.yaml')}"/>
+ <xacro:property name="vehicle_info" value="${xacro.load_yaml('$(find ub_lincoln_vehicle_description)/config/vehicle_info.param.yaml')}"/>
 
   <!-- vehicle body -->
   <link name="base_link">
     <visual>
-      <origin xyz="${vehicle_info['/**']['ros__parameters']['wheel_base']/2.0} 0 0" rpy="${pi/2.0} 0 ${pi}"/>
+      <origin xyz="1.30 0 0" rpy="0 0 1.57"/>
       <geometry>
         <mesh filename="package://ub_lincoln_vehicle_description/mesh/ub_lincoln.dae" scale="1 1 1"/>
       </geometry>
